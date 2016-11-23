@@ -1,0 +1,57 @@
+So what is something that all college dstudentds do regardless of major, gender, race, ethnicity, country?
+
+They drink and use their phones
+
+so why has someone not incroperated these two things into an app?
+And see the best thing about it is that it would be easy to develop
+WE don't need a fancy ui or graphics, what we need is engaged game play that involves multiple people and their each indvidual phones
+
+This idea is taken from always sunny in phelidelphias' chardee mac dennis!!!
+
+ok
+
+Things needed:
+Initial screen: Choice of school
+Connect all the phones together, over bluetooth?, wifi, something else?
+integrate arduino?
+
+name for the game?
+
+link to spotify music playlist than can pause and play the music/ play other songs
+dirnking option yes/no
+charrades
+pong
+slapcup
+quarters
+monopoly
+poker
+
+get a survey of answers, when you answe the question each option has a probability distribution and from that you can select the right answer
+send survey to only cornell people first
+
+Who would win in a fight: Benjamin Franklin at age 62 or naploleon dynamite from the movie napoleon dynamite
+
+What is the right way to peel a banana? yellow, green, black, magenta, turquopise, gold, silver, rustic brown, white, pink, red, grey, gray, orange
+how manyants can usain bolt outrun?
+all of them
+all of them except the one that beat him becauxze he3 was sleeping
+
+what species of whale is kanye west:
+  blue whale
+  gray whale
+  killer whale
+  great whale
+
+How many bass drops would mozart deem acceptable?
+
+when is hte worst time to get sick
+  sunday
+  fuly 29
+  the day after your birthday
+  on the day morgan freeman was born
+  the result of 3+7
+  3?
+
+puthon fetch data from goodle format
+
+jmultiple suvey that changes based on when you took it.
