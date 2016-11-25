@@ -1,5 +1,5 @@
 import random
-SPACE = ". \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . . \n"
+SPACE = "\n . . . . .  \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . . \n"
 HASH = "############################################################"
 class Game:
     def __init__(self, num_teams):
@@ -16,6 +16,7 @@ class Game:
         names = []
         for n in range(int(self.num_teams)):
             player_n  = raw_input('Enter your name Team '  + str(n) + ': ')
+            print "Welcome " player_n
             print SPACE
             names.append(player_n)
         return names
