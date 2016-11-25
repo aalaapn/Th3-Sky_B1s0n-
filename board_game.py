@@ -1,21 +1,24 @@
 import random
-
+SPACE = ". \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . . \n"
+HASH = "############################################################"
 class Game:
-    def __init__(self, num_players):
-        self.num_players = num_players
-    ##############################
+    def __init__(self, num_teams):
+        self.num_teams = num_teams
+
+
+    #############################
     #game initialization
     ##############################
-    def get_num_players(self):
-        return self.num_players
+    def get_num_teams(self):
+        return self.num_teams
 
     def get_players(self):
         names = []
-        for n in range(self.num_players):
-            player_n  = raw_input('Enter your name player'  + str(n) + ': ')
+        for n in range(int(self.num_teams)):
+            player_n  = raw_input('Enter your name Team '  + str(n) + ': ')
+            print SPACE
             names.append(player_n)
-            return names
-        print ("Thank You!")
+        return names
 
     ##############################
     #actions
@@ -24,12 +27,25 @@ class Game:
         dice_roll = random.randrange(6)
         return dice_roll
 
+    def pick_game(self, games):
+        num_games = len(games) -1
+        return random.randrange(0, num_games)
+
+
     ##############################
     #levels
     ##############################
-    def level_one (Mind):
-        trivia      = 0
-        artistry    = 1
-        chance      = 2
-        puzzle      = 3
-        dice_roll   = random.randrange(0,3)
+    def level_one(self, names):
+        self.names = names
+        games =  [  "trivia",
+                    "artistry",
+                    "chance",
+                    "puzzle",]
+        dice_roll   = random.randrange(0,len(games))
+        print HASH
+        print("Welcome to level one")
+        print HASH
+        for n in range(int(self.num_teams)):
+            game = self.pick_game(games)
+            print SPACE
+            print self.names[n] + " " + " your game is : " + games[dice_roll]

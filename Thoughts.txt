@@ -55,3 +55,20 @@ when is hte worst time to get sick
 puthon fetch data from goodle format
 
 jmultiple suvey that changes based on when you took it.
+
+
+implement teams
+
+
+import wave file of music
+regular fourier transform
+at every bass drop display a coloer
+every freq display a different frequency
+every x value corresponds to a line on the screne
+by x value we mean frequency
+
+at double the frequency a human can percieve you change the pixels to go in a cirle
+so it is slowly spinning in a spiral
+
+
+go to school in order to devolop the work, no distractions keep focus away from parents!
