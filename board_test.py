@@ -1,5 +1,5 @@
 import board_game as bg
+import user input as yn
 
-test = bg.Game(4)
-players = test.get_players()
-print players
+
+yn.yes_no("Are you ready?")

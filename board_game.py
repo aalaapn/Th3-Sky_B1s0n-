@@ -1,5 +1,12 @@
 import random
+<<<<<<< HEAD
+import user_input
+import ascii_art.py as ascii_art
+
+SPACE = ". \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . . \n"
+=======
 SPACE = "\n . . . . .  \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . . \n"
+>>>>>>> af5afc14297eb46324b0ede2208db656f43b4ba9
 HASH = "############################################################"
 class Game:
     def __init__(self, num_teams):
@@ -44,9 +51,15 @@ class Game:
                     "puzzle",]
         dice_roll   = random.randrange(0,len(games))
         print HASH
-        print("Welcome to level one")
+        ascii_art.level_one_text()
         print HASH
         for n in range(int(self.num_teams)):
             game = self.pick_game(games)
             print SPACE
             print self.names[n] + " " + " your game is : " + games[dice_roll]
+
+    def level_two(self, names):
+        self.names = names
+
+    def level_three(self, names):
+        self.names = namess
