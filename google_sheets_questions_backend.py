@@ -58,7 +58,7 @@ service = discovery.build('sheets', 'v4', http=http,
 
 #spreadsheetId = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms'
 spreadsheetId = '19orie97IMYbHyZg0rd2FQy_joWmA9wqpFIHLq8u8clw'
-rangeName = 'A2:Z'
+rangeName = 'A2:ZZ'
 result = service.spreadsheets().values().get(
     spreadsheetId=spreadsheetId, range=rangeName).execute()
 values = result.get('values', [])
@@ -67,14 +67,18 @@ values = result.get('values', [])
 class data():
     def __init__(self):
         return
+
+    def value_length(self):
+        return len(values)
+
     def get_cat_level_one(self):
-        cat_level_one = []
+        arr = []
         if not values:
             print('No data found.')
         else:
             for row in values:
-                cat_level_one.append(row[1])
-        return cat_level_one[0:4]
+                arr.append(row[1])
+        return arr[0:4]
 
     def get_trivia_questions(self):
         arr = []
@@ -122,6 +126,15 @@ class data():
         return arr
 
     def get_body(self):
+        arr = []
+        if not values:
+            print('No data found.')
+        else:
+            for row in values:
+                arr.append(row[7])
+        return arr
+
+    def get_spirit(self):
         arr = []
         if not values:
             print('No data found.')

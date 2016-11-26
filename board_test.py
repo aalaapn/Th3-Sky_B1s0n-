@@ -20,10 +20,10 @@ cat_level_one = data.get_cat_level_one()
 trivia_questions = data.get_trivia_questions()
 trivia_answers = data.get_trivia_answers()
 a = data.get_artistry()
-# b = data.get_chance()
-# c = data.get_puzzle()
-# d = data.get_body()
+b = data.get_chance()
+c = data.get_puzzle()
+d = data.get_body()
+e = data.get_spirit()
 
-
-for x in (trivia_answers):
+for x in e:
     print x

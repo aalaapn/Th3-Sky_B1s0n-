@@ -135,6 +135,18 @@ level_three_ascii = """\
 
  """
 
+SPACE_SMALL_ASCII = """\
+\n . . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .
+"""
+SPACE_LARGE_ASCII = """\
+        \n . . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .
+        \n . . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .
+        \n . . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .
+        \n . . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .
+        \n . . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .. . . . .
+        \n"""
+HASH_ACSII = "############################################################"
+
 def dragon():
     print dragon_ascii
 
@@ -146,3 +158,12 @@ def level_two_text():
 
 def level_three_text():
     print level_three_ascii
+
+def small_space():
+    print SPACE_SMALL_ASCII
+
+def large_space():
+    print SPACE_LARGE_ASCII
+
+def hash():
+    print HASH_ACSII

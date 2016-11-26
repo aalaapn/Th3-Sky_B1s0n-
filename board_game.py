@@ -1,11 +1,18 @@
 import random
 import user_input
-import ascii_art.py as ascii_art
-import google_sheets_questions_backend.py as qdata
+import ascii_art as ascii_art
+import google_sheets_questions_backend as qdata
+DATA = qdata.data()
+class Team:
+    def __init__(self, score):
+        self.score = score
+        
+    def gain_point():
+        self.score +=1
 
-SPACE = ". \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . . \n"
-SPACE = "\n . . . . .  \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . . \n"
-HASH = "############################################################"
+    def get_score():
+        return self.score
+
 class Game:
     def __init__(self, num_teams):
         self.num_teams = num_teams
@@ -21,8 +28,11 @@ class Game:
         names = []
         for n in range(int(self.num_teams)):
             player_n  = raw_input('Enter your name Team '  + str(n) + ': ')
-            print "Welcome " player_n
-            print SPACE
+            ascii_art.small_space()
+            ascii_art.hash()
+            print "Welcome " + player_n
+            ascii_art.hash()
+            ascii_art.small_space()
             names.append(player_n)
         return names
 
@@ -34,27 +44,38 @@ class Game:
         return dice_roll
 
     def pick_game(self, games):
-        num_games = len(games) -1
+        num_games = len(games)
         return random.randrange(0, num_games)
-
 
     ##############################
     #levels
     ##############################
     def level_one(self, names):
         self.names = names
-        games =  [  "trivia",
-                    "artistry",
-                    "chance",
-                    "puzzle",]
-        dice_roll   = random.randrange(0,len(games))
-        print HASH
-        ascii_art.level_one_text()
-        print HASH
         for n in range(int(self.num_teams)):
-            game = self.pick_game(games)
-            print SPACE
-            print self.names[n] + " " + " your game is : " + games[dice_roll]
+            user_input.get_yes_no("Ready for Level One? " + self.names[n])
+        dice_roll   = random.randrange(0,len(DATA.get_cat_level_one()))
+
+        ascii_art.hash()
+        ascii_art.level_one_text()
+        ascii_art.hash()
+
+        while(1):
+            for n in range(int(self.num_teams)):
+                print self.names[n] + "your turn to play!!!"
+                game = self.pick_game(DATA.get_cat_level_one())
+                ascii_art.small_space()
+                print self.names[n] + " " + " your catagory is : " + DATA.get_cat_level_one()[game]
+                if (DATA.get_cat_level_one()[game] == 'Trivia'):
+                    print 'trivia'
+                elif (DATA.get_cat_level_one()[game] == 'Artistry'):
+                    print 'Artistry'
+                elif (DATA.get_cat_level_one()[game] == 'Chance'):
+                    print 'Chance'
+                elif (DATA.get_cat_level_one()[game] == 'Puzzle'):
+                    print 'Puzzle'
+
+
 
     def level_two(self, names):
         self.names = names
