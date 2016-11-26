@@ -5,10 +5,19 @@ import google_sheets_questions_backend as qdata
 
 #constants
 DATA = qdata.data()
-NUM_TRIVIA
-NUM_ARTISTRY
-NUM_CHANCE
-NUM_PUZZLE
+TRIVIA_QUESTIONS    =   DATA.get_trivia_questions()
+TRIVIA_ANSWERS      =   DATA.get_trivia_answers()
+NUM_TRIVIA          =   len(TRIVIA_QUESTIONS)
+ARTISTRY_QUESTIONS  =   DATA.get_artistry()
+NUM_ARTISTRY        =   len(ARTISTRY_QUESTIONS)
+CHANCE_QUESTIONS    =   DATA.get_chance()
+NUM_CHANCE          =   len(CHANCE_QUESTIONS)
+PUZZLE_QUESTIONS    =   DATA.get_puzzle()
+NUM_PUZZLE          =   len(PUZZLE_QUESTIONS)
+BODY_QUESTIONS      =   DATA.get_body()
+NUM_BODY            =   len(BODY_QUESTIONS)
+SPIRIT_QUESTIONS    =   DATA.get_spirit()
+NUM_SPIRIT          =   len(SPIRIT_QUESTIONS)
 
 class Team:
     def __init__(self, name, score):
@@ -81,7 +90,7 @@ class Game:
                 print self.names[n].get_name() + " " + " your catagory is : " + DATA.get_cat_level_one()[game]
 
                 if (DATA.get_cat_level_one()[game] == 'Trivia'):
-                    print 'trivia'
+                    
                 elif (DATA.get_cat_level_one()[game] == 'Artistry'):
                     print 'Artistry'
                 elif (DATA.get_cat_level_one()[game] == 'Chance'):

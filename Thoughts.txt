@@ -77,3 +77,7 @@ go to school in order to devolop the work, no distractions keep focus away from 
 current fpga's are not very user friendly and fairly expensive. fpga based on the riscV isa.
 develop a simple GUI based programing enviornemnt for kids to learn digital logic design.
 develop curriculum to teach comparch/ digital logic design.
+
+
+
+one pixel expaned to 9 pixels
