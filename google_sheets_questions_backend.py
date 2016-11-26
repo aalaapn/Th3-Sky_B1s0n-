@@ -76,7 +76,62 @@ def main():
         for row in values:
             # Print columns A and E, which correspond to indices 0 and 4.
             print('%s, %s' % (row[0], row[4]))
+def level_one_catagories():
+    """Get the catagories for level one
+    Creates a Sheets API service object and return the major
+    students in a sample spreadsheet:
+    https://docs.google.com/spreadsheets/d/19orie97IMYbHyZg0rd2FQy_joWmA9wqpFIHLq8u8clw/edit#gid=0
+    """
+    credentials = get_credentials()
+    http = credentials.authorize(httplib2.Http())
+    discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?'
+                    'version=v4')
+    service = discovery.build('sheets', 'v4', http=http,
+                              discoveryServiceUrl=discoveryUrl)
 
+    #spreadsheetId = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms'
+    spreadsheetId = '19orie97IMYbHyZg0rd2FQy_joWmA9wqpFIHLq8u8clw'
+    rangeName = 'A2:E'
+    result = service.spreadsheets().values().get(
+        spreadsheetId=spreadsheetId, range=rangeName).execute()
+    values = result.get('values', [])
 
-if __name__ == '__main__':
-    main()
+    catagories = []
+
+    if not values:
+        print('No data found.')
+    else:
+        print('Name, Major:')
+        for row in values:
+            # Print columns A and E, which correspond to indices 0 and 4.
+            catagories.append(row[1])
+        return catagories
+class data():
+    credentials = get_credentials()
+    http = credentials.authorize(httplib2.Http())
+    discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?'
+                    'version=v4')
+    service = discovery.build('sheets', 'v4', http=http,
+                              discoveryServiceUrl=discoveryUrl)
+
+    #spreadsheetId = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms'
+    spreadsheetId = '19orie97IMYbHyZg0rd2FQy_joWmA9wqpFIHLq8u8clw'
+    rangeName = 'A2:E'
+    result = service.spreadsheets().values().get(
+        spreadsheetId=spreadsheetId, range=rangeName).execute()
+    values = result.get('values', [])
+
+    def __init__(self, levels, cat_level_one, cat_level_two, cat_level_three):
+        self.levels = levels
+        self.cat_level_one = cat_level_one
+        self.cat_level_two = cat_level_two
+        self.cat_level_three = cat_level_three
+
+    def get_cat_level_one():
+        catagories = []
+        if not values:
+            print('No data found.')
+        else:
+            for row in values:
+                # Print columns A and E, which correspond to indices 0 and 4.
+                self.cat_level_one.append(row[1])

@@ -1,12 +1,10 @@
 import random
-<<<<<<< HEAD
 import user_input
 import ascii_art.py as ascii_art
+import google_sheets_questions_backend.py as qdata
 
 SPACE = ". \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . . \n"
-=======
 SPACE = "\n . . . . .  \n . . . . .  \n . . . . .  \n . . . . .  \n . . . . . \n"
->>>>>>> af5afc14297eb46324b0ede2208db656f43b4ba9
 HASH = "############################################################"
 class Game:
     def __init__(self, num_teams):
