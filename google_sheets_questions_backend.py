@@ -142,3 +142,12 @@ class data():
             for row in values:
                 arr.append(row[8])
         return arr
+
+    def get_classics(self):
+        arr = []
+        if not values:
+            print('No data found.')
+        else:
+            for row in values:
+                arr.append(row[9])
+        return arr

@@ -90,7 +90,7 @@ class Game:
                 print self.names[n].get_name() + " " + " your catagory is : " + DATA.get_cat_level_one()[game]
 
                 if (DATA.get_cat_level_one()[game] == 'Trivia'):
-                    
+
                 elif (DATA.get_cat_level_one()[game] == 'Artistry'):
                     print 'Artistry'
                 elif (DATA.get_cat_level_one()[game] == 'Chance'):
@@ -105,4 +105,10 @@ class Game:
         self.names = names
 
     def level_three(self, names):
-        self.names = namess
+        self.names = names
+
+    def level_four(self, names):
+        self.names = names
+
+    def level_five(self, names):
+        self.names = names

@@ -1,5 +1,5 @@
 import sys
-
+import random
 
 def get_yes_no(question, default="yes"):
     """Ask a yes/no question via raw_input() and return their answer.
@@ -32,3 +32,13 @@ def get_yes_no(question, default="yes"):
         else:
             sys.stdout.write("Please respond with 'yes' or 'no' "
                              "(or 'y' or 'n').\n")
+def ask_sq(questions, answers):
+    rand_sq = random.randrange(0,len(questions))
+    prompt_q = (questions[rand_sq])
+    while True:
+        sys.stdout.write(prompt_q)
+        choice = int(raw_input())
+        if (choice == answers[rand_sq]):
+            return True
+        else:
+            return False
