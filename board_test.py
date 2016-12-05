@@ -1,4 +1,8 @@
-import google_sheets_questions_backend as g_data
-DATA = qdata.data()
-classics = DATA.get_classics()
-print classics
+import board_game as bg
+Winner = False
+
+
+game = bg.Game(1)
+teams = game.get_players()
+while(1):
+    game.level_two(teams, 0)
