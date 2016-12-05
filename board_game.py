@@ -158,7 +158,7 @@ class Game:
 
         self.names[result_of_question].gain_point()
         self.names[result_of_question].update_level()
-        if(self.names[self.team_number].get_score() == 10):
+        if(self.names[self.team_number].get_score() == 20):
             ascii_art.end_level_one_text()
 
 
@@ -181,7 +181,7 @@ class Game:
 
         self.names[result_of_question].gain_point()
         self.names[result_of_question].update_level()
-        if(self.names[self.team_number].get_score() == 10):
+        if(self.names[self.team_number].get_score() == 25):
             ascii_art.end_level_one_text()
 
 
@@ -204,7 +204,7 @@ class Game:
 
         self.names[result_of_question].gain_point()
         self.names[result_of_question].update_level()
-        if(self.names[self.team_number].get_score() == 10):
+        if(self.names[self.team_number].get_score() == 30):
             ascii_art.end_level_one_text()
 
     def level_five(self, names, team_number):
@@ -226,5 +226,5 @@ class Game:
 
         self.names[result_of_question].gain_point()
         self.names[result_of_question].update_level()
-        if(self.names[self.team_number].get_score() == 10):
+        if(self.names[self.team_number].get_score() == 35):
             ascii_art.end_level_one_text()
